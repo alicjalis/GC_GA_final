@@ -135,11 +135,14 @@ unsigned int GA::fitness_of_individual(unsigned int index) {
 }
 
 void GA::print_population() {
+    int min_colors=99999;
     for (unsigned int i = 0; i < n_individuals; i++) {
         std::cout << std::endl;
         ga_population[i].printChromosome();
         std::cout << "Fitness: " << fitness_of_individual(i);
+        if(min_colors>ga_population[i].get_n_colors()) min_colors = ga_population[i].get_n_colors();
     }
+    std::cout<<"\n\nMinimal number of colours: "<<min_colors<<"\n";
 }
 
 bool GA::correct_color(unsigned int n_colors, double percentage) {
