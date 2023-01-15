@@ -48,7 +48,6 @@ public:
         and the number of individuals that we want
         ga_population: previous ga_population
         new_ind: numbwe of individuals in the new ga_population
-
         return: the new ga_population
     */
     std::vector<individual> reproduce(const std::vector<individual>& population, unsigned int new_ind) const;
@@ -57,7 +56,6 @@ public:
         and the number of individuals that we want
         ga_population: previous ga_population
         new_ind: numbwe of individuals in the new ga_population
-
         return: the new ga_population
     */
     static std::vector<individual> mutate(const std::vector<individual>& population, unsigned int new_ind);
@@ -78,10 +76,8 @@ public:
         This value is calcuflated:
             1. Every time a edge is good (both nodes have different colors)
                 it will add 1 to the variable, if the node is not correct wilk add 0.
-
             2. If all the edges are correct (fitnes = N_edges) it will add
                 N-N_colors_used to the value.
-
         Return: Fitness of a specific infividual
     */
     unsigned int fitness_of_individual(unsigned int index);
@@ -92,7 +88,6 @@ public:
 
     /*  It will check if the "percentage" of the ga_population has found a
         solution with "n_colors"
-
             n_colors: The number of colors that will use as a reference
             percentage: The percentage of the ga_population that has to found a
                 solution with that number of colors

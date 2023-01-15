@@ -10,7 +10,7 @@ int main() {
 
     unsigned int total_iterations = 0, max_iterations = 1000;
     auto start = std::chrono::high_resolution_clock::now();
-    int n_individuals = 1000, min_colors = 0;
+    int n_individuals = 100, min_colors = 0;
     double p_best = 40.0, p_cross = 40.0, p_mutation = 20.0;
 
     GA solution(n_individuals, graph_main.get_nodes(), graph_main.get_edges(), graph_main.get_graph());
@@ -22,5 +22,6 @@ int main() {
 
     std::cout << "\nSolution found! Time elapsed: " << std::chrono::duration_cast<std::chrono::seconds>(elapsed).count()
               << " seconds." << std::endl;
+    std::cout<<"Min colors: "<< individual::min_colors << std::endl;
     return 0;
 }

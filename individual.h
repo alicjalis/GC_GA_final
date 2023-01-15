@@ -6,6 +6,7 @@
 #include <random>
 #include <algorithm>
 #include <set>
+#include <limits>
 
 /*
 The individual class is used in the Genetic Algorithm and in the Simulated Annealing
@@ -21,6 +22,8 @@ private:
     unsigned int fitness = 0;
 
 public:
+
+    inline static unsigned int min_colors = std::numeric_limits<unsigned int>::max();
 
     individual() = default;
 

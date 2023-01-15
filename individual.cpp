@@ -43,6 +43,7 @@ unsigned int individual::get_n_colors() const {
 
 void individual::printChromosome() const {
     std::cout << " N of color used: " << this->get_n_colors() << std::endl;
+    min_colors = std::min(min_colors, this->get_n_colors());
 }
 
 unsigned int individual::at(unsigned int i) {
